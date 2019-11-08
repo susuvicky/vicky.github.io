@@ -1,22 +1,22 @@
 module.exports = {
-  title: '乐颜',  // 设置网站标题
-  description : '个人博客',
-  base: '/vicky.github.io/',
-  repo: 'https://susuvicky.github.io/vicky.github.io/',
-  dest: './docs/.vuepress/dist',
+  title: '汤圆',  // 设置网站标题
+  description : '一只前端猫的博客', //网站描述
+  base: '/vicky.github.io/', //根路径
+  repo: 'https://susuvicky.github.io/vicky.github.io/', //网站地址
+  dest: './docs/.vuepress/dist', //输出目录
   head: [
     ['link', {
       rel: 'icon',
       href: '/favicon.ico'
     }]
-  ],
-  // base : '/v1/adroi-h5/adroiapi/',
+  ], //注入到<head>标签
   themeConfig : {
+    logo: '/logo.png', //网站logo
+    smoothScroll: true,
     nav : [
       { text: '首页', link: '/' },
       {
         text: '前端知识',
-        // link: '/frontend/',
         items: [{
           text: 'Vuepress', link: '/frontend/vuepress/'
         },{
@@ -34,9 +34,15 @@ module.exports = {
         title: '前端知识',
         collapsable: false,
         children: [
-          '/frontend/vuepress/',
-          '/frontend/vue/',
-          '/frontend/react/'
+          {
+            title: 'VuePress',
+            path: '/frontend/vuepress/',
+            children: [
+              ['/frontend/vuepress/', '介绍'],
+              ['/frontend/vuepress/basic', '基础知识'],
+              ['/frontend/vuepress/work', '如何使用']
+            ]
+          }
         ]
       },
       {

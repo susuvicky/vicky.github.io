@@ -9,8 +9,8 @@ cd docs/.vuepress/dist
 git init
 git add -A
 git commit -m 'deploy'
-# push到新建仓库的 master 分支
-git push -f https://github.com/susuvicky/vicky.github.io.git master
+# push到新建仓库的 gh-pages 分支
+git push -f https://github.com/susuvicky/vicky.github.io.git gh-pages
 
 cd -
 
